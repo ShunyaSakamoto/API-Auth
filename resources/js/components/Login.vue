@@ -99,9 +99,9 @@ export default {
                 // console.log(this.user);
             })
             .catch(err => {
-                this.error = err.response;
+                this.error = err.response.data.errors;
                 this.emailError = true;
-                console.log(err.response);
+                console.log(err.response.data.errors);
             });
         }
     }
